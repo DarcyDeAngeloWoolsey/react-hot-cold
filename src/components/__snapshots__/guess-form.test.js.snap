@@ -1,0 +1,24 @@
+exports[`<GuessForm /> Renders correctly 1`] = `
+<form
+  onSubmit={[Function]}>
+  <label
+    htmlFor="userGuess">
+    Enter your Guess
+  </label>
+  <input
+    autoComplete="off"
+    className="text"
+    id="userGuess"
+    maxLength="3"
+    name="userGuess"
+    placeholder={32}
+    required={true}
+    type="text" />
+  <input
+    className="button"
+    id="guessButton"
+    name="submit"
+    type="submit"
+    value="Guess" />
+</form>
+`;

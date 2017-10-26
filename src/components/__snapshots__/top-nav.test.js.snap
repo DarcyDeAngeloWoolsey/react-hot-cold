@@ -1,0 +1,23 @@
+exports[`<TopNav /> Renders correctly 1`] = `
+<nav>
+  <ul
+    className="clearfix">
+    <li>
+      <a
+        className="what"
+        href="#"
+        onClick={[Function]}>
+        What?
+      </a>
+    </li>
+    <li>
+      <a
+        className="new"
+        href="#"
+        onClick={[Function]}>
+        + New Game
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
