@@ -6,11 +6,14 @@ import GuessList from './guess-list';
 
 describe('<GuessList />', () => {
     it('Renders without crashing', () => {
-        shallow(<GuessList />);
+        shallow(<GuessList guesses={ [] }/>);
     });
         
-    it('Has class guessList', () => {
-        const wrapper = shallow(<GuessList />);
+    it('Has class guessBox', () => {
+        const wrapper = shallow(<GuessList guesses={ [] }/>);
         expect(wrapper.find('ul').hasClass('guessBox')).toEqual(true);
-        });    
+        });
+     
+    //How to check if {guesses} null?
+    
     });
