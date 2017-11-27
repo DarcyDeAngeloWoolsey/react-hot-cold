@@ -5,34 +5,35 @@ import GuessSection from './guess-section';
 import GuessCount  from './guess-count';
 import GuessList from './guess-list';
 
-export default class Game extends React.Component {
-    constructor(props) {
+export default function Game(props) { //change
+    /*constructor(props) {
         super(props);
         this.state = {
             guesses: [],
             feedback: 'Make your guess!',
             correctAnswer: Math.floor(Math.random() * 100) + 1,
         };
-    }
+    }*/
 
-    newGame() {
-        this.setState({
+    //newGame() {
+        /*this.setState({
             guesses: [],
             feedback: 'Make your guess!',
             correctAnswer: Math.floor(Math.random() * 100) + 1,
-        });
-    }
+        });*/
+      //  this.props.dispatch(newGame()); thought I needed this
+    //}
 
-    guess(guess) {
+    /*guess(guess) {
         guess = parseInt(guess, 10);
         if (isNaN(guess)) {
             this.setState({
                 feedback: 'Please enter a valid number'
             });
             return;
-        }
+        }*/
 
-        const difference = Math.abs(guess - this.state.correctAnswer);
+       /* const difference = Math.abs(guess - this.state.correctAnswer);
 
         let feedback;
         if (difference >= 50) {
@@ -55,18 +56,22 @@ export default class Game extends React.Component {
             feedback,
             guesses: [...this.state.guesses, guess]
         });
-    }
+    }*/
 
-    render() {
+    //render() {
         return (
             <div>
-                <Header onNewGame={() => this.newGame()}/>
-                <GuessSection feedback={this.state.feedback}
-                    onGuess={(guess) => this.guess(guess)} />
-                <GuessCount count={this.state.guesses.length} />
-                <GuessList guesses={this.state.guesses} />
+                <Header />
+                <GuessSection  />
+                <GuessCount  />
+                <GuessList />
             </div>
         );
-    }
-}
+   // }
+};
 
+/*const mapStateToProps = state => ({
+    //lists: state.lists
+}); Why don't  I need this 
+
+export default connect(mapStateToProps)(Board); or this */
